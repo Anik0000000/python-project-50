@@ -1,8 +1,8 @@
 lint:
-	ruff check .
+	python -m ruff check src/
 
 test:
-	pytest tests/
+	python -m pytest tests/
 
 coverage:
-	pytest --cov=gendiff --cov-report=xml tests/
+	python -m pytest --cov=gendiff --cov-report=xml tests/
