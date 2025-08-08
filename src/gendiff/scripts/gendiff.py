@@ -1,7 +1,18 @@
 import argparse
+import json
+from pathlib import Path
 
-def generate_diff(file1, file2, format_name='stylish'):
-    return ""
+
+def parse_file(file_path):
+    with open(file_path) as f:
+        return json.load(f)
+
+
+def generate_diff(file1_path, file2_path, format_name='stylish'):
+    data1 = parse_file(file1_path)
+    data2 = parse_file(file2_path)
+    return f"Comparing:\n{data1}\nand\n{data2}"
+
 
 def main():
     parser = argparse.ArgumentParser(
