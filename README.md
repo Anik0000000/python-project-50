@@ -1,6 +1,7 @@
 # Gendiff - JSON Difference Generator
-
-Compares two JSON configuration files and shows a difference.
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Anik0000000_python-project-50)](https://sonarcloud.io/summary/new_code?id=Anik0000000_python-project-50)
+![Python CI](https://github.com/Anik0000000/python-project-50/actions/workflows/python.yml/badge.svg)
+![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=Anik0000000_python-project-50&metric=coverage)
 
 ## Installation
 ```bash
@@ -13,22 +14,17 @@ pip install git+https://github.com/Anik0000000/python-project-50.git
 gendiff file1.json file2.json
 ```
 
-Example output:
-```
-{
-  - follow: false
-    host: hexlet.io
-  - proxy: 123.234.53.22
-  - timeout: 50
-  + timeout: 20
-  + verbose: true
-}
-```
-
 ### As library
 ```python
 from gendiff import generate_diff
 
 diff = generate_diff('file1.json', 'file2.json')
 print(diff)
+```
+
+## Development
+```bash
+make lint  # Run linter
+make test  # Run tests
+make coverage  # Generate coverage report
 ```
