@@ -5,7 +5,7 @@ from gendiff import generate_diff
 
 def get_fixture_path(filename):
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    return os.path.join(current_dir, 'fixtures', filename)
+    return os.path.join(current_dir, 'test_data', filename)
 
 
 def read_file(filepath):
