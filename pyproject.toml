@@ -12,8 +12,12 @@ gendiff = "gendiff.scripts.gendiff:main"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build]
+include = ["src/gendiff"]
+exclude = ["tests"]
+
 [tool.hatch.build.targets.wheel]
-packages = ["gendiff"]
+packages = ["src/gendiff"]
 
 [project.optional-dependencies]
 test = [
