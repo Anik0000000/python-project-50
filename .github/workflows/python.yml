@@ -15,6 +15,7 @@ jobs:
       run: |
         pip install hatch
         hatch build
+        pip install ruff
         pip install dist/*.whl
         pip install pytest pytest-cov
     - name: Lint with ruff
