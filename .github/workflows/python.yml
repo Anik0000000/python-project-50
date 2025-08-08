@@ -13,7 +13,9 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        pip install -e .
+        pip install hatch
+        hatch build
+        pip install dist/*.whl
         pip install pytest pytest-cov
     - name: Lint with ruff
       run: make lint
