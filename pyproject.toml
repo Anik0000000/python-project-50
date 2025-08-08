@@ -1,0 +1,10 @@
+[project]
+name = "hexlet-project-50"
+version = "0.1.0"
+description = "Compares two configuration files and shows a difference."
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
+
