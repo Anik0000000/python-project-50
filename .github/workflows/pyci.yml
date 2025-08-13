@@ -12,11 +12,10 @@ jobs:
         python-version: [3.11]
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python 
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
-        # make depends on poetry
+          python-version: "3.10"
       - name: Install dependencies
         run: |
           pip install poetry
@@ -25,11 +24,12 @@ jobs:
         run: |
           make lint
           make check
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v5.0.0
-        if: github.ref_name == 'main'
+      - name: SonarQubeScan
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          coverageCommand: make test-coverage
-          debug: true
+          args: >
+            -Dsonar.projectKey=hexlet-boilerplates_python-package
+            -Dsonar.organization=hexlet-boilerplates
+            -Dsonar.python.coverage.reportPaths=coverage.xml
