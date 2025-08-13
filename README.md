@@ -9,4 +9,4 @@
 ## Minimum requirements for starting a project:
 - Python version 3.11 or higher
 - Pip version 24 or higher
-- Poetry version 1.8.2 or higher (you can use the make install command to install)
+- Poetry version 1.8.2 or higher
