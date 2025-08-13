@@ -33,5 +33,3 @@ jobs:
           args: >
             -Dsonar.projectKey=Anik0000000_python-project-50
             -Dsonar.organization=anik0000000
-            -Dsonar.python.coverage.reportPaths=coverage.xml
-            -Dsonar.analysis.ci=false
