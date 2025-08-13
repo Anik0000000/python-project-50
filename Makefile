@@ -1,8 +1,26 @@
+install:
+	poetry install
+
+build:
+	poetry build
+
+publish:
+	poetry publish --dry-run
+
+package-install:
+	python3 -m pip install --user --force-reinstall dist/*.whl
+
 lint:
-	python -m ruff check src/
+	poetry run flake8 gendiff
+
+check:
+	poetry check
+
+test-coverage:
+	poetry run pytest --cov=gendiff --cov-report xml
 
 test:
-	python -m pytest tests/
+	poetry run pytest
 
-coverage:
-	python -m pytest --cov=gendiff --cov-report=xml tests/
+test-cov:
+	poetry run pytest --cov

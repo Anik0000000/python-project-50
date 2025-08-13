@@ -3,28 +3,25 @@
 ![Python CI](https://github.com/Anik0000000/python-project-50/actions/workflows/python.yml/badge.svg)
 ![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=Anik0000000_python-project-50&metric=coverage)
 
-## Installation
-```bash
-pip install git+https://github.com/Anik0000000/python-project-50.git
-```
+## Описание
+Вычислитель отличий – программа, которая определяет разницу между двумя структурами данных.
 
-## Usage
-### As CLI tool
-```bash
-gendiff file1.json file2.json
-```
+## Minimum requirements for starting a project:
+- Python version 3.11 or higher
+- Pip version 24 or higher
+- Poetry version 1.8.2 or higher (you can use the make install command to install)
 
-### As library
-```python
-from gendiff import generate_diff
+**Пример работы пакета**
 
-diff = generate_diff('file1.json', 'file2.json')
-print(diff)
-```
+[![asciicast](https://asciinema.org/a/YqvqfKV3xHhzSixr8CiqIhq0h.svg)](https://asciinema.org/a/YqvqfKV3xHhzSixr8CiqIhq0h)
 
-## Development
-```bash
-make lint  # Run linter
-make test  # Run tests
-make coverage  # Generate coverage report
-```
+[![asciicast](https://asciinema.org/a/RdXR3gX0H598u7X7Y0LVvHWE9.svg)](https://asciinema.org/a/RdXR3gX0H598u7X7Y0LVvHWE9)
+
+Nested stylish
+[![asciicast](https://asciinema.org/a/dmpwqmJ1AkDdl65pQPkkOboiV.svg)](https://asciinema.org/a/dmpwqmJ1AkDdl65pQPkkOboiV)
+
+Plain
+[![asciicast](https://asciinema.org/a/6r0Aln07rPScNDZTALwgautcE.svg)](https://asciinema.org/a/6r0Aln07rPScNDZTALwgautcE)
+
+Json
+[![asciicast](https://asciinema.org/a/KdxbGF47VIkhV6viyfqWlhc9c.svg)](https://asciinema.org/a/KdxbGF47VIkhV6viyfqWlhc9c)
