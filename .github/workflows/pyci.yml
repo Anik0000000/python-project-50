@@ -24,12 +24,14 @@ jobs:
         run: |
           make lint
           make check
-      - name: SonarQubeScan
-        uses: SonarSource/sonarqube-scan-action@v5
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
             -Dsonar.projectKey=Anik0000000_python-project-50
             -Dsonar.organization=anik0000000
             -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.analysis.ci=false
