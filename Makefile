@@ -11,9 +11,6 @@ lint:
 	ruff check .
 	ruff format --check .
 
-format:
-	ruff format .
-
 build:
 	uv pip install build
 	python -m build
