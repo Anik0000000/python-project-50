@@ -29,9 +29,13 @@ jobs:
           echo "VIRTUAL_ENV=$PWD/.venv" >> $GITHUB_ENV
           echo "$PWD/.venv/bin" >> $GITHUB_PATH
 
-
+      - name: Install uv
+        run: |
+          make install
+          
       - name: Run linter and pytest
         run: |
+          pip install ruff
           make lint
           make test
       
