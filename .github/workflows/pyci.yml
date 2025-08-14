@@ -25,6 +25,7 @@ jobs:
 
       - name: Run linter and pytest
         run: |
+          pip install pytest ruff
           make check
 
       - name: Run test coverage
