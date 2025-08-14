@@ -3,6 +3,7 @@ from collections import OrderedDict
 from gendiff.formatters.json_formated import format_json
 from gendiff.formatters.plain_formated import format_plain
 from gendiff.formatters.stylish_formated import format_stylish
+
 from .read_file import read_file
 
 
