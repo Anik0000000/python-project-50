@@ -25,6 +25,7 @@ def gen_diff(data1, data2) -> dict:
 
     return OrderedDict(sorted(diff.items(), key=lambda k: k))
 
+
 def generate_diff(
     file_path1: str,
     file_path2: str,
