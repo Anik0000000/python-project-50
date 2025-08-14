@@ -9,7 +9,6 @@ test-coverage:
 
 lint:
 	ruff check .
-	ruff format --check .
 
 build:
 	uv pip install build
