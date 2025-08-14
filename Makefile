@@ -9,11 +9,3 @@ test-coverage:
 
 lint:
 	ruff check .
-
-build:
-	uv pip install build
-	python -m build
-
-publish:
-	uv pip install twine
-	twine upload dist/*
