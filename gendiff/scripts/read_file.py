@@ -5,12 +5,14 @@ from .parser import parse
 
 
 def read_file(file_path):
-    with open(file_path) as f:
-        if file_path.endswith('.yaml') or file_path.endswith('.yml'):
-            return yaml.safe_load(f)
-        elif file_path.endswith('.json'):
-            return json.load(f)
-        raise ValueError("Unsupported file format")
+    if file_path.startswith("http"):
+        return network_data(file_path)
+
+    with open(file_path, "r") as file:
+        if file_path.endswith("json"):
+            return parse(file.read(), "json")
+        elif file_path.endswith("yaml") or file_path.endswith("yml"):
+            return parse(file.read(), "yaml")
 
 
 def network_data(url):
