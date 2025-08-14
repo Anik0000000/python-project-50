@@ -1,5 +1,4 @@
 import requests
-import yaml
 
 from .parser import parse
 
