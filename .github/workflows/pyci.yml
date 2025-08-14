@@ -12,28 +12,26 @@ jobs:
         python-version: [3.11]
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Python
 
-      - name: Set up Python 
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.13.1"
-      
+
       - name: Install UV
-      run: |
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
-      
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+          
       - name: Install dependencies
-      run: |
-        uv pip install -e .[dev]
-        
+        run: |
+          uv pip install -e .[dev]
       - name: Run tests
         run: |
           uv run pytest
-
       - name: Run linter
-      run: |
-        uv run ruff check .
+        run: |
+          uv run ruff check .
 
       - name: Run test coverage
         run: |
