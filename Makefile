@@ -13,5 +13,5 @@ lint:
 	ruff check --fix
 
 check:
-	pytest -xvv
+	python -m pytest
 	ruff check --fix
