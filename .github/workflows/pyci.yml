@@ -12,20 +12,30 @@ jobs:
         python-version: [3.11]
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python 
         uses: actions/setup-python@v4
         with:
           python-version: "3.13.1"
+      
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
       - name: Install dependencies
         run: |
-          make Install
+          uv pip install -e .[dev]
+
       - name: Run linter and pytest
         run: |
           make lint
           make check
+      
       - name: Run test coverage
         run: |
           make test-coverage
+
       - name: SonarQubeScan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
