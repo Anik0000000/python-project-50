@@ -1,8 +1,9 @@
 from collections import OrderedDict
 
-from .formatters.json_formated import format_json
-from .formatters.plain_formated import format_plain
-from .formatters.stylish_formated import format_stylish
+from gendiff.formatters.json_formated import format_json
+from gendiff.formatters.plain_formated import format_plain
+from gendiff.formatters.stylish_formated import format_stylish
+
 from .read_file import read_file
 
 
@@ -25,17 +26,23 @@ def gen_diff(data1, data2) -> dict:
     return OrderedDict(sorted(diff.items(), key=lambda k: k))
 
 
-def generate_diff(data1: str, data2: str, format="stylish"):
-    old_file = read_file(data1)
-    new_file = read_file(data2)
-    diff = gen_diff(old_file, new_file)
+def generate_diff(
+    file_path1: str,
+    file_path2: str,
+    format_name: str = "stylish"
+    ) -> str:
+   
+    data1 = read_file(file_path1)
+    data2 = read_file(file_path2)
+    diff = gen_diff(data1, data2)
 
-    match format:
-        case None:
-            return format_stylish(diff)
-        case "stylish":
-            return format_stylish(diff)
-        case "plain":
-            return format_plain(diff)
-        case "json":
-            return format_json(diff)
+    formatters = {
+        "stylish": format_stylish,
+        "plain": format_plain,
+        "json": format_json
+    }
+
+    if format_name not in formatters:
+        raise ValueError(f"Unknown format: {format_name}")
+
+    return formatters[format_name](diff) 

@@ -16,6 +16,10 @@ dependencies = [
     "requests>=2.32.0",       
     "PyYAML>=6.0",  
     ]
+
+[project.scripts]
+gendiff = "gendiff.scripts.cli:cli"
+
 [project.optional-dependencies]
 dev = [
     "ruff>=0.3.0",          
