@@ -18,15 +18,22 @@ jobs:
         with:
           python-version: "3.13.1"
       
+      - name: Install UV
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+      
       - name: Install dependencies
+      run: |
+        uv pip install -e .[dev]
+        
+      - name: Run tests
         run: |
-          pip install uv
-          make install
+          uv run pytest
 
-      - name: Run linter and pytest
-        run: |
-          pip install pytest ruff
-          make check
+      - name: Run linter
+      run: |
+        uv run ruff check .
 
       - name: Run test coverage
         run: |
