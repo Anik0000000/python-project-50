@@ -18,7 +18,7 @@ dependencies = [
     ]
 
 [project.scripts]
-gendiff = "gendiff.generate_diff:generate_diff"
+gendiff = "gendiff.gendiff:main"
 
 [project.optional-dependencies]
 dev = [
