@@ -17,6 +17,9 @@ dependencies = [
     "PyYAML>=6.0",  
     ]
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
 [project.scripts]
 gendiff = "gendiff.gendiff:main"
 
