@@ -11,3 +11,7 @@ test-coverage:
 
 lint:
 	ruff check --fix
+
+check:
+	pytest -xvv
+	ruff check --fix
