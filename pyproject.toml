@@ -15,9 +15,15 @@ license = {text = "MIT"}
 
 [project.optional-dependencies]
 dev = [
-    "pytest",
-    "ruff>=0.3.0",
-    "pytest-cov",
-    "build",
-    "twine",
+    "ruff>=0.3.0",          
+    "pytest>=8.0.0",         
+    "pytest-cov>=4.0.0",    
+    "build>=1.0.0",         
+    "twine>=4.0.0"        
 ]
+
+[project]
+dependencies = [
+    "requests>=2.32.0",       
+    "PyYAML>=6.0",  
+   ]
