@@ -1,26 +1,23 @@
 install:
-	poetry install
-
-build:
-	poetry build
-
-publish:
-	poetry publish --dry-run
-
-package-install:
-	python3 -m pip install --user --force-reinstall dist/*.whl
-
-lint:
-	poetry run flake8 gendiff
-
-check:
-	poetry check
-
-test-coverage:
-	poetry run pytest --cov=gendiff --cov-report xml
+	uv pip install .
 
 test:
-	poetry run pytest
+	pytest -xvv
 
-test-cov:
-	poetry run pytest --cov
+test-coverage:
+	pytest --cov=gendiff --cov-report xml
+
+lint:
+	ruff check .
+	ruff format --check .
+
+format:
+	ruff format .
+
+build:
+	uv pip install build
+	python -m build
+
+publish:
+	uv pip install twine
+	twine upload dist/*
