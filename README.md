@@ -1,6 +1,6 @@
 # Gendiff - JSON Difference Generator
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Anik0000000_python-project-50)](https://sonarcloud.io/summary/new_code?id=Anik0000000_python-project-50)
-![Python CI](https://github.com/Anik0000000/python-project-50/actions/workflows/pyci.yml/badge.svg)
+![Python CI](https://github.com/Anik0000000/python-project-50/actions/workflows/pyci.yml/badge.svg)Ты
 
 # Gendiff — сравнение конфигурационных файлов
 
@@ -18,12 +18,12 @@ git clone https://github.com/Anik0000000/python-project-50
 cd python-project-50
 uv pip install -e .
 
-[![asciicast](https://asciinema.org/a/HIhrEJfr7p116nIEEjsHKn4Ew)](https://asciinema.org/a/HIhrEJfr7p116nIEEjsHKn4Ew)
+[![asciicast](https://asciinema.org/a/HIhrEJfr7p116nIEEjsHKn4Ew.svg)](https://asciinema.org/a/HIhrEJfr7p116nIEEjsHKn4Ew)
 
-[![asciicast](https://asciinema.org/a/0YgTDYPeouBxShZs0venLGG5O)](https://asciinema.org/a/0YgTDYPeouBxShZs0venLGG5O)
+[![asciicast](https://asciinema.org/a/0YgTDYPeouBxShZs0venLGG5O.svg)](https://asciinema.org/a/0YgTDYPeouBxShZs0venLGG5O)
 
-[![asciicast](https://asciinema.org/a/RzGWCUoWLpCl8ocPHgYXVcITR)](https://asciinema.org/a/RzGWCUoWLpCl8ocPHgYXVcITR)
+[![asciicast](https://asciinema.org/a/RzGWCUoWLpCl8ocPHgYXVcITR.svg)](https://asciinema.org/a/RzGWCUoWLpCl8ocPHgYXVcITR)
 
-[![asciicast](https://asciinema.org/a/ScWJKAwNyyNUETqQ9zHa2m3PT)](https://asciinema.org/a/ScWJKAwNyyNUETqQ9zHa2m3PT)
+[![asciicast](https://asciinema.org/a/ScWJKAwNyyNUETqQ9zHa2m3PT.svg)](https://asciinema.org/a/ScWJKAwNyyNUETqQ9zHa2m3PT)
 
-[![asciicast](https://asciinema.org/a/DWgyKMGcZeeECIXtNMe9nhFNP)](https://asciinema.org/a/DWgyKMGcZeeECIXtNMe9nhFNP)
+[![asciicast](https://asciinema.org/a/DWgyKMGcZeeECIXtNMe9nhFNP.svg)](https://asciinema.org/a/DWgyKMGcZeeECIXtNMe9nhFNP)
