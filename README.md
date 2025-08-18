@@ -17,6 +17,7 @@
 git clone https://github.com/Anik0000000/python-project-50
 cd python-project-50
 uv pip install -e .
+```
 
 [![asciicast](https://asciinema.org/a/HIhrEJfr7p116nIEEjsHKn4Ew.svg)](https://asciinema.org/a/HIhrEJfr7p116nIEEjsHKn4Ew)
 
