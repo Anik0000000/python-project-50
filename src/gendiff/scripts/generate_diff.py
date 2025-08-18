@@ -1,9 +1,9 @@
 from collections import OrderedDict
 
-from .formatters.json_formated import format_json
-from .formatters.plain_formated import format_plain
-from .formatters.stylish_formated import format_stylish
-from .scripts.read_file import read_file
+from ..formatters.json_formated import format_json
+from ..formatters.plain_formated import format_plain
+from ..formatters.stylish_formated import format_stylish
+from .read_file import read_file
 
 
 def gen_diff(data1, data2) -> dict:

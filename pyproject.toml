@@ -1,6 +1,4 @@
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+
 
 [project]
 name = "hexlet-code"
@@ -12,16 +10,21 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
+
 dependencies = [
     "requests>=2.32.0",       
     "PyYAML>=6.0",  
     ]
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["gendiff"]
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
-
-[project.scripts]
-gendiff = "gendiff.gendiff:main"
 
 [project.optional-dependencies]
 dev = [
@@ -31,3 +34,7 @@ dev = [
     "build>=1.0.0",         
     "twine>=4.0.0"        
 ]
+
+[project.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
+
